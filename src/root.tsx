@@ -1,5 +1,11 @@
+import Header from "./components/header";
+
 function Root() {
-  return <>Hello world!</>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 }
 
 export default Root;
