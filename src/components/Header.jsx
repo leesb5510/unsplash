@@ -1,6 +1,16 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 const Header = () => {
+  const [inputValue, setInputValue] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    navigate(`/search?query=${inputValue}`);
+  };
+
   return (
     <header>
       <Nav>
@@ -8,11 +18,17 @@ const Header = () => {
           <img src="/logo.svg" />
         </ImageBox>
 
-        <SearchForm>
+        <SearchForm onSubmit={handleSubmit}>
           <SrcBtn>
             <SrcImg src="/search.svg" />
           </SrcBtn>
-          <Input placeholder="사진과 일러스트 검색" />
+          <Input
+            type="text"
+            onChange={(e) => {
+              setInputValue(e.target.value);
+            }}
+            placeholder="사진과 일러스트 검색"
+          />
         </SearchForm>
         <RightSideDiv>
           <ul>
