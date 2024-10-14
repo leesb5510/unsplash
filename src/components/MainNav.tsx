@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Divider, Span } from "./header";
+import { Divider, Span } from "./Header";
 
 const MainNav = () => {
   return (
@@ -33,7 +33,7 @@ const MainNav = () => {
             <Span>실험적인</Span>
           </li>
           <li>
-            <Span>패션 & 뷰티</Span>
+            <Span>패션 &amp; 뷰티</Span>
           </li>
           <li>
             <Span>필름</Span>
