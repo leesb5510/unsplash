@@ -1,5 +1,13 @@
+import Header from "./components/header";
+import MainNav from "./components/MainNav";
+
 function Root() {
-  return <>Hello world!</>;
+  return (
+    <>
+      <Header />
+      <MainNav />
+    </>
+  );
 }
 
 export default Root;
